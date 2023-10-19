@@ -1,0 +1,179 @@
+.card {
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 15px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonsContainer {
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.button {
+  width: 250px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.35);
+}
+
+.buttonLabel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.submitButton {
+  width: 250px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: none;
+  box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  background-color: #007eae;
+  color: #fff;
+  cursor: pointer;
+}
+
+.disabledSubmitButton {
+  width: 250px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  border: none;
+  box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.5);
+  background-color: #787878;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.spinner {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007eae;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.httpCallFeedbackContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.successIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #5ad63b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dangerIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #d21f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 25px;
+}
+
+.arrowIcon {
+  width: 25px;
+  transform: scale(1.5);
+}
+
+.goBackButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007eae;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.text {
+  width: 85%;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #007eae;
+  color: white;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 90%;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+
+  .card .button .spinner {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-left-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  .card .button .text {
+    width: 85%;
+    text-align: center;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
